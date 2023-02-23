@@ -20,7 +20,7 @@ const adicionarCard = (nome, nota) => {
 
         alert('ERRO: O campo não pode estar vazio!')
 
-    } else if (notaA < 0 || notaA > 10) {
+    } else if (parseInt(notaA) < 0 || parseInt(notaA) > 10) {
 
         alert('ERRO: A nota vai de 0(zero) a 10(dez)')
 
@@ -43,15 +43,17 @@ const adicionarCard = (nome, nota) => {
 
 const handleClick = () => {
 
-    const aluno = {
+    // const aluno = {
 
-        nome: prompt('Digite o nome do aluno(a)'),
-        nota: prompt('Digite a nota sua nota')
-    }
+    //     nome: prompt('Digite o nome do aluno(a)'),
+    //     nota: prompt('Digite a nota sua nota')
+    // }
 
-    adicionarCard(aluno)
+    // adicionarCard(aluno)
 
-
+    const nome = prompt('Digite o nome do aluno(a)')
+    const nota = prompt('Digite a nota sua nota')
+    adicionarCard(nome, nota)
 
 }
 
